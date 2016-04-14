@@ -1,5 +1,6 @@
 package ar.edu.unlam.tallerweb.tarea1;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class PerimetroTest {
@@ -8,7 +9,13 @@ public class PerimetroTest {
 	public void testPerimetroCuadrado() {
 		Perimetro miPerimetro= new Perimetro();
 		Integer lado=7;
-		miPerimetro.PerimetroCuadrado(lado);
+		float perimetroObtenido=miPerimetro.PerimetroCuadrado(lado);
+		
+		float perimetroEsperado=28;
+		
+		Assert.assertEquals(perimetroEsperado,perimetroObtenido,0.1);
+		
+		miPerimetro=null;
 		
 	}
 	
@@ -17,7 +24,13 @@ public class PerimetroTest {
 	{
 		Perimetro miPerimetro= new Perimetro();
 		Integer radio=15;
-		miPerimetro.PerimetroCirculo(radio);
+		float perimetroObtenido=miPerimetro.PerimetroCirculo(radio);
+		
+		float perimetroEsperado=94.2F;
+		
+		Assert.assertEquals(perimetroEsperado,perimetroObtenido,0.1);
+		
+		miPerimetro=null;
 		
 	}
 	
